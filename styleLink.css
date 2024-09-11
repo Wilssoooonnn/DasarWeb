@@ -1,0 +1,15 @@
+.link{
+    font-size: 20pt;
+}
+.link:hover{
+    color: red !important;
+    /* font-size: 40pt; */
+}
+.link:link{
+    color: blue;
+    /* text-align: center; */
+    /* font-size: 40px; */
+}
+.link:visited{
+    color: greenyellow;
+}
