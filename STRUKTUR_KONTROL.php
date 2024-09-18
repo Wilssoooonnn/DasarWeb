@@ -85,3 +85,12 @@ if ($totalPembelian > 100000) {
 } else {
     echo "Harga Normal: $hargaProduk";
 }
+
+echo "<br><br>";
+
+$skor = 500;
+
+
+echo "Total Skor Pemain Adalah: $skor. <br>";
+echo "Apakah pemain mendapatkan hadiah tambahan? ";
+echo ($skor > 500) ? "<b>YES</b>" : "<b>NO</b>";
