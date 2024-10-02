@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animate</title>
+    <link rel="stylesheet" href="styleAnimate.css" />
+    <script type="text/javascript" src="JQuery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $(".box").animate({ left: "500px" });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button type="button">Start Aniamte</button>
+    <div class="box"></div>
+  </body>
+</html>
