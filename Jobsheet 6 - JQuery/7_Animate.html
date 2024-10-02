@@ -9,7 +9,12 @@
     <script>
       $(document).ready(function () {
         $("button").click(function () {
-          $(".box").animate({ left: "500px" });
+          $(".box")
+            .animate({ width: "300px" })
+            .animate({ height: "300px" })
+            .animate({ marginLeft: "150px" })
+            .animate({ borderWidth: "5px" })
+            .animate({ opacity: ".5" });
         });
       });
     </script>
