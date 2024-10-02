@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Effect pt.2</title>
+    <link rel="stylesheet" href="styleSlide.css" />
+    <script type="text/javascript" src="JQuery.js"></script>
+    <script>
+      // SlideUp
+      //End SlideUp
+      //    $(document).ready(function () {
+      //     $("#flip").click(function () {
+      //       $("#kotak2").slideUp("slow");
+      //     });
+      //   });
+      // SlideDown
+      //    $(document).ready(function () {
+      //       $("#flip").click(function () {
+      //       $("#kotak2").slideDown("slow");
+      //     });
+      // });
+      //End SlideDown
+      // SlideToggle
+      $(document).ready(function () {
+        $("#flip").click(function () {
+          $("#kotak2").slideToggle("slow");
+        });
+      });
+      //End SlideToggle
+    </script>
+  </head>
+  <body>
+    <div id="flip">klik for Flip Slide</div>
+    <div id="kotak2">Selamat Pagi</div>
+  </body>
+</html>
