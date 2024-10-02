@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Load</title>
+    <script src="JQuery.js"></script>
+  </head>
+  <body>
+    <div id="box">
+      <h2>Klik tombol dibawah untuk menampilkan konten</h2>
+    </div>
+    <button type="button">Load</button>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("#box").load("test-content.html");
+      });
+    });
+  </script>
+</html>
