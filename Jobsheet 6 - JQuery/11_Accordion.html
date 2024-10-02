@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion</title>
+    <script src="JQuery.js"></script>
+    <script src="jquery-ui-1.14.0.custom/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.14.0.custom/jquery-ui.css">
+  </head>
+  <body>
+    <div id="JQuery_accordion">
+      <h3>Header 1</h3>
+      <p>This is section 1. Place your content here.</p>
+      <h3>Header 2</h3>
+      <p>
+        This is section 2. Place your content here.
+        <br />
+        <img src="img/1.avif" alt="" srcset="" />
+      </p>
+      <h3>Header 3</h3>
+      <div>
+        <p>This is section 3. Place your content here.
+
+            <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ol>
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(function () {
+      $("#JQuery_accordion").accordion();
+    });
+  </script>
+</html>
