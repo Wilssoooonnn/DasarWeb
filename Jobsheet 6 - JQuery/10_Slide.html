@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide</title>
+    <link rel="stylesheet" href="styleSlider.css" />
+    <script src="JQuery.js"></script>
+    <script>
+      var i = 0;
+
+      $(document).ready(function () {
+        $("#sliderTitle, #slider img").hide();
+        showNextImage();
+        setInterval(showNextImage, 3000);
+      });
+
+      function showNextImage() {
+        i++;
+        $("#slideImg" + i)
+          //   .appendTo("#slider")
+          .fadeIn(1100)
+          .delay(1100)
+          .fadeOut(1100);
+        $("#title" + i)
+          //   .appendTo("#sliderTitle")
+          .fadeIn(1100)
+          .delay(1100)
+          .fadeOut(1100);
+
+        if (i == 3) {
+          i = 0;
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="slider">
+      <img id="slideImg1" src="img/1.avif" />
+      <div class="sliderTitle" id="title1">Gambar 1</div>
+
+      <img id="slideImg2" src="img/2.avif" />
+      <div class="sliderTitle" id="title2">Gambar 2</div>
+
+      <img id="slideImg3" src="img/3.avif" />
+      <div class="sliderTitle" id="title3">Gambar 3</div>
+    </div>
+  </body>
+</html>
