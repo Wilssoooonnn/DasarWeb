@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selector</title>
+    <script type="text/javascript" src="JQuery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+            $("h2").hide()
+            $(".subjudul").hide()
+            $("#paragraf").hide()
+            $("#paragraf.dua").hide()
+            $("div p.paragraf").hide()
+        });
+        // coba coba
+        $(".btn").click(function () {
+            $("h2").show()
+            $(".subjudul").show()
+            $("#paragraf").show()
+            $("#paragraf.dua").show()
+            $("div p.paragraf").show()
+        })
+        //end coba coba
+      });
+    </script>
+  </head>
+  <body>
+    <h2>ini adalah Judul Bab</h2>
+    <h3 class="subjudul">ini Sub Judul Bab</h3>
+    <p id="paragraf">ini paragraf pertama</p>
+    <p id="paragraf" class="dua">ini paragraf kedua</p>
+    <div>
+      <p class="paragraf">
+        ini paragraf ketiga
+      </p>
+    </div>
+    <p>ini paragraf yang akan tetap ditampilkan</p>
+    <button>Klik Saya!</button>
+    <button class="btn">Klik Saya!</button>
+  </body>
+</html>
