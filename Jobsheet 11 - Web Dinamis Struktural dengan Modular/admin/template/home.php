@@ -24,6 +24,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Jumlah Anggota</h5>
                             <p class="card-text"><?php echo $row_anggota['Jumlah']; ?> orang</p>
+                            <a href="index.php?page=anggota" class="btn btn-primary"><i class="fa fa-user" aria-hidden="true"></i> Kelola</a>
                         </div>
                     </div>
                 </div>
@@ -32,6 +33,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Jumlah Jabatan</h5>
                             <p class="card-text"><?php echo $row_jabatan['Jumlah']; ?> orang</p>
+                            <a href="index.php?page=jabatan" class="btn btn-primary"><i class="fa fa-user" aria-hidden="true"></i> Kelola</a>
+
                         </div>
                     </div>
                 </div>
