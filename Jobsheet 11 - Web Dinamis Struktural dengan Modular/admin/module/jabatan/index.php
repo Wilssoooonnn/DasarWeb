@@ -45,7 +45,7 @@
                                 <td><?= $row['keterangan']; ?></td>
                                 <td>
                                     <a href="index.php?page=jabatan/edit&id=<?php echo $row['id']; ?>" class="btn btn-warning btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
-                                    <a href="fungsi/hapus.php?jabatan=hapus&id=<?php echo $row['id']; ?>" onclick="javascript:return confirm('Hapus Data Jabatan ?');" class="btn btn-danger btn-xs"><i class="fa fa-trash-o" aria-hidden="true"></i> Hapus</a>
+                                    <a href="function/hapus.php?jabatan=hapus&id=<?php echo $row['id']; ?>" onclick="javascript:return confirm('Hapus Data Jabatan ?');" class="btn btn-danger btn-xs"><i class="fa fa-trash-o" aria-hidden="true"></i> Hapus</a>
                                 </td>
                             </tr>
                         <?php
@@ -63,7 +63,7 @@
                             <h1 class="modal-title fs-5" id="exampleModalLabel">Form Jabatan</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <form action="fungsi/tambah.php?jabatan=tambah" method="POST">
+                        <form action="function/tambah.php?jabatan=tambah" method="POST">
                             <div class="modal-body">
                                 <div class="mb-3">
                                     <label for="recipient-name" class="col-form-label">Nama Jabatan:</label>
