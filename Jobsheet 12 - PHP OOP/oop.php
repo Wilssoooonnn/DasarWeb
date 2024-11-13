@@ -1,40 +1,25 @@
 <?php
-// 1.1 -> Upgrade to 1.4
+// 1.1 -> Upgrade to 1.7
 class Car
 {
-    public $brand, $color;
+    public $brand;
 
-    public function __construct($brand, $color)
+    public function __construct($brand)
     {
         $this->brand = $brand;
-        $this->color = $color;
     }
     public function __getBrand()
     {
         return $this->brand;
     }
-    public function __getColor()
+
+    public function __destruct()
     {
-        return $this->color;
-    }
-    public function __setBrand($brand)
-    {
-        $this->brand = $brand;
-    }
-    public function __setColor($color)
-    {
-        $this->color = $color;
+        echo "The car is destroyed<br>";
     }
 }
-
-$car = new Car("Toyota", "Blue");
-
-echo "Brand: " . $car->__getBrand() . "<br>";
-echo "Color: " . $car->__getColor() . "<br>";
-
-$car->__setColor("Red");
-
-echo "Updated Color: " . $car->__getColor() . "<br>";
+$car = new Car("Toyota");
+echo "The car brand is: " . $car->__getBrand() . "<br>";
 
 // 1.2
 class Animal
