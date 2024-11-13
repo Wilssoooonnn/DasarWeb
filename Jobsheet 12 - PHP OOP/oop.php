@@ -79,7 +79,7 @@ $dog->sleep();
 $cat->meow();
 $dog->bark();
 
-// 1.3 -> Upgrade to 1.5
+// 1.3 -> Upgrade to 1.6
 interface Shape
 {
     public function calculateArea();
