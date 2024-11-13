@@ -80,45 +80,54 @@ $cat->meow();
 $dog->bark();
 
 // 1.3 -> Upgrade to 1.5
-abstract class Shape
+interface Shape
 {
-    abstract public function calculateArea();
+    public function calculateArea();
+}
+interface Color
+{
+    public function getColor();
 }
 
-class Circle extends Shape
+class Circle implements Shape, Color
 {
-    private $radius;
+    private $radius, $color;
 
-    public function __construct($radius)
+    public function __construct($radius, $color)
     {
         $this->radius = $radius;
+        $this->color = $color;
     }
 
     public function calculateArea()
     {
         return pi() * $this->radius * $this->radius;
     }
-}
 
-class Rectangle extends Shape
-{
-    private $width;
-    private $height;
-
-    public function __construct($width, $height)
+    public function getColor()
     {
-        $this->width = $width;
-        $this->height = $height;
-    }
-
-    public function calculateArea()
-    {
-        return $this->width * $this->height;
+        return $this->color;
     }
 }
 
-$circle = new Circle(5);
-$rectangle = new Rectangle(4, 6);
+// class Rectangle implements Shape, Color
+// {
+//     private $width;
+//     private $height;
+
+//     public function __construct($width, $height)
+//     {
+//         $this->width = $width;
+//         $this->height = $height;
+//     }
+
+//     public function calculateArea()
+//     {
+//         return $this->width * $this->height;
+//     }
+// }
+
+$circle = new Circle(5, "Blue");
 
 echo "Circle Area: " . $circle->calculateArea() . "<br>";
-echo "Rectangle Area: " . $rectangle->calculateArea() . "<br>";
+echo "Circle Color: " . $circle->getColor() . "<br>";
