@@ -79,13 +79,13 @@ $dog->sleep();
 $cat->meow();
 $dog->bark();
 
-// 1.3
-interface Shape
+// 1.3 -> Upgrade to 1.5
+abstract class Shape
 {
-    public function calculateArea();
+    abstract public function calculateArea();
 }
 
-class Circle implements Shape
+class Circle extends Shape
 {
     private $radius;
 
@@ -100,7 +100,7 @@ class Circle implements Shape
     }
 }
 
-class Rectangle implements Shape
+class Rectangle extends Shape
 {
     private $width;
     private $height;
@@ -116,13 +116,9 @@ class Rectangle implements Shape
         return $this->width * $this->height;
     }
 }
-function PrintArea(Shape $shape)
-{
-    echo "Area: " . $shape->calculateArea() . "<br>";
-}
 
 $circle = new Circle(5);
 $rectangle = new Rectangle(4, 6);
 
-PrintArea($circle);
-PrintArea($rectangle);
+echo "Circle Area: " . $circle->calculateArea() . "<br>";
+echo "Rectangle Area: " . $rectangle->calculateArea() . "<br>";
