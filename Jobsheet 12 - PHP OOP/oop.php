@@ -24,20 +24,26 @@ echo "The car brand is: " . $car->__getBrand() . "<br>";
 // 1.2
 class Animal
 {
-    protected $name;
+    public $name;
+    protected $age;
+    private $color;
 
-    public function __construct($name)
-    {
+    public function __construct($name, $age, $color){
         $this->name = $name;
-    }
-    public function eat()
-    {
-        echo $this->name . " is eating<br>";
+        $this->age = $age;
+        $this->color = $color;
     }
 
-    public function sleep()
-    {
-        echo $this->name . " is sleeping<br>";
+    public function getName(){
+        return $this->name;
+    }
+
+    public function getAge(){
+        return $this->age;
+    }
+
+    public function getColor(){
+        return $this->color;
     }
 }
 class Cat extends Animal
@@ -55,14 +61,11 @@ class Dog extends Animal
     }
 }
 
-$cat = new Cat("Whiskers");
-$dog = new Dog("Buddy");
+$animal = new Animal("Dog", 3, "Brown");
 
-$cat->eat();
-$dog->sleep();
-
-$cat->meow();
-$dog->bark();
+echo "Name: " . $animal->getName() . "<br>";
+echo "Age: " . $animal->getAge() . "<br>";
+echo "Color: " . $animal->getColor() . "<br>";
 
 // 1.3 -> Upgrade to 1.6
 interface Shape
