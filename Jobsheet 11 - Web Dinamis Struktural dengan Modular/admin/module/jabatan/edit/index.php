@@ -16,7 +16,8 @@
                     Form Edit Jabatan
                 </div>
                 <div class="card-body">
-                    <form action="function/edit.php?jabatan=edit" method="POST" enctype="multipart/form-data"> <input type="hidden" value="<?php echo $row['id']; ?>" name="id">
+                    <form action="function/edit.php?jabatan=edit" method="POST" enctype="multipart/form-data"> 
+                        <input type="hidden" value="<?php echo $row['id']; ?>" name="id">
                         <div class="mb-3">
                             <label for="jabatan" class="forn-label">Jabatan</label>
                             <input type="text" class="form-control" value="<?php echo $row['jabatan']; ?>" name="jabatan" id="jabatan">
