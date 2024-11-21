@@ -8,7 +8,7 @@ class Car
     {
         $this->brand = $brand;
     }
-    public function __getBrand()
+    public function getBrand()
     {
         return $this->brand;
     }
@@ -19,7 +19,7 @@ class Car
     }
 }
 $car = new Car("Toyota");
-echo "The car brand is: " . $car->__getBrand() . "<br>";
+echo "The car brand is: " . $car->getBrand() . "<br>";
 
 // 1.2
 class Animal
@@ -28,21 +28,25 @@ class Animal
     protected $age;
     private $color;
 
-    public function __construct($name, $age, $color){
+    public function __construct($name, $age, $color)
+    {
         $this->name = $name;
         $this->age = $age;
         $this->color = $color;
     }
 
-    public function getName(){
+    public function getName()
+    {
         return $this->name;
     }
 
-    public function getAge(){
+    public function getAge()
+    {
         return $this->age;
     }
 
-    public function getColor(){
+    public function getColor()
+    {
         return $this->color;
     }
 }
